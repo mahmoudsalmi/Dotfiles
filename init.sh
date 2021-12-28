@@ -2,3 +2,4 @@
 
 mkdir -p $HOME/.local/_suckless
 mkdir -p $HOME/.config
+mkdir -p $HOME/.cache/zsh/history

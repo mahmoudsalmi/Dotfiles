@@ -3,9 +3,7 @@
 # ========================================================================
 
 # MS Variables
-export MS_LOCAL="$HOME/.local"
-export MS_SL="$MS_LOCAL/_suckless"
-export MS_SL_REPO="$MS_SL/repo"
+source $MS_ZSH_CONFIG/variables.sh
 
 # Fix Locale
 export LANG="en_US.UTF-8"

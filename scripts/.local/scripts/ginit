@@ -1,0 +1,21 @@
+#!/bin/zsh
+if [ -f "$HOME/.config/zsh/variables.sh" ]; then
+  echo "[ERROR] File [$HOME/.config/zsh/variables.sh] not found !!"
+  exit 3
+fi
+
+source "$HOME/.config/zsh/variables.sh"
+
+if [ -z "$MS_GIT_REPOS" ]; then
+  echo "[ERROR] Variable [MS_GIT_REPOS] is not defined !"
+  exit 1
+fi
+
+if [ -z "$1" ]; then
+  echo "[ERROR] No argument supplied"
+  exit 2
+fi
+
+git init --bare --shared "$MS_GIT_REPOS/$1.git" && echo "[DONE]"
+
+

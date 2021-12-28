@@ -25,4 +25,6 @@ _darcs
 ^/LICENSE.*
 ^/COPYING
 
-programs
+programs/
+nvim/.config/nvim/autoload/
+nvim/.config/nvim/plugged/

@@ -14,7 +14,7 @@ export LC_ALL="en_US.UTF-8"
 # Preferred editor for local and remote sessions
 export EDITOR='nvim'
 export SHELL="/bin/zsh"
-export TERM='alacritty'
+export TERM='xterm-256color'
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # History in cache directory:

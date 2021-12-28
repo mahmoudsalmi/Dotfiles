@@ -65,7 +65,7 @@ fi
 
 if [[ $OSTYPE = (darwin)* ]]; then
     zplug "lib/clipboard",         from:oh-my-zsh
-    zplug "plugins/osx",           from:oh-my-zsh
+    zplug "plugins/macos",         from:oh-my-zsh
     zplug "plugins/brew",          from:oh-my-zsh, if:"(( $+commands[brew] ))"
 fi
 

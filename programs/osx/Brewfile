@@ -1,0 +1,117 @@
+# ---------------------------------------------------------------------------------------------- Repos
+# ------------------------------------------------------ Brew
+tap "homebrew/core"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/bundle"
+tap "homebrew/services"
+
+# ------------------------------------------------------ Tiers
+tap "mongodb/brew"          # MongoDB
+tap "teamookla/speedtest"   # speedtest
+tap "adoptopenjdk/openjdk"  # JDK
+
+# ---------------------------------------------------------------------------------------------- Install
+# ------------------------------------------------------ Package Manager
+brew "mas"              # App Store
+
+# ------------------------------------------------------ Languages
+brew "python@3.10"      # PY
+brew "python@3.9"
+brew "nvm"              # Js
+brew "glib"             # C / C++
+brew "pkg-config"
+brew "cmake"
+brew "elm"              # Elm
+brew "elm-format"
+brew "adoptopenjdk8"    # JAVA
+brew "adoptopenjdk15"
+brew "adoptopenjdk"
+brew "kotlin"           # KT
+brew "lua"              # LUA
+cask "julia"            # JL
+
+# ------------------------------------------------------ Dev
+brew "exercism"         # https://exercism.org/dashboard
+brew "lazygit"          # git TUI
+brew "neovim"           # VIM :)
+brew "tokei"            # count code (languages)
+
+# ------------------------------------------------------ Dev Env
+brew "gradle"               # Gradle
+brew "gradle-completion"
+brew "maven"                # Maven
+
+# ------------------------------------------------------ Dev DB
+brew "groonga"                                                  # fast and accurate full text search engine
+brew "redis", restart_service: true                             # Redis [redis-cli]
+brew "mariadb", restart_service: true                           # MariaDB
+brew "postgresql", restart_service: true                        # postgresql
+brew "mongodb/brew/mongodb-community", restart_service: true    # mongodb
+cask "sqlpro-for-mssql"                                         # MSSql client
+
+# ------------------------------------------------------ Library
+brew "imlib2"               # Image C library
+brew "harfbuzz"             # Text shaping library
+brew "sdl2"                 # Simple DirectMedia Layer
+brew "libheif"              # HEIF and AVIF
+brew "glew"                 # OpenGl
+brew "glfw"
+brew "libcaca"              # text instead of pixels
+brew "nghttp2"              # HTTP/2 C Library
+cask "font-hack-nerd-font"  # Nerd Font
+
+# ------------------------------------------------------ TUI
+brew "bat"                              # pretty cat
+brew "bitwarden-cli"                    # passwords manager
+brew "btop"                             # pretty top
+brew "gotop"
+brew "htop"
+brew "exa"                              # pretty ls
+brew "fd"                               # power find
+brew "ffmpeg"                           # multimedia framework
+brew "fswatch"                          # file change monitor
+brew "fzf"                              # fuzzy finder
+brew "gh"                               # Github
+brew "imagemagick"                      # Manipulate images [convert]
+brew "jq"                               # JSON processor
+brew "jump"                             # navigate faster [j]
+brew "links"                            # Web navigator
+brew "neofetch"                         # Welcome TUI
+brew "pfetch"
+brew "pandoc"                           # Document converter
+brew "procs"                            # pretty ps
+brew "ranger"                           # File manager
+brew "ripgrep"                          # pretty grep [rg]
+brew "teamookla/speedtest/speedtest"    # speedtest
+brew "starship"                         # prompt
+brew "stow"                             # symlink farm manager
+brew "telnet"                           # TCP comm
+brew "tmux"                             # terminal multiplexer
+brew "tree"                             # dir tree
+brew "wget"                             # web downloader
+brew "youtube-dl"                       # youtube downloader
+
+# ------------------------------------------------------ Audit
+brew "vnstat", restart_service: true        # Network traffic monitor
+
+# ------------------------------------------------------ GUI
+brew "mplayer"          # Video player
+brew "mpv"
+cask "vlc"
+cask "alacritty"        # Terminal client
+cask "kitty"
+cask "chromium"         # Web navigator
+cask "qutebrowser"
+cask "firefox"
+cask "xquartz"          # System X
+
+# ------------------------------------------------------ Chess engine
+brew "lc0"
+mas "Stockfish", id: 801463932
+
+# ------------------------------------------------------ App
+mas "Bitwarden", id: 1352778147
+mas "Moom", id: 419330170
+mas "Remote Desktop", id: 409907375
+mas "Xcode", id: 497799835

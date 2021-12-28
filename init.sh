@@ -9,3 +9,5 @@ mkdir -p $HOME/.config/nvim
 
 mkdir -p $HOME/.cache
 mkdir -p $HOME/.cache/zsh
+
+echo "Done"

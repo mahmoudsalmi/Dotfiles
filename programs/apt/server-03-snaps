@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# ------------------------------------------------------ Dev
+# git TUI
+snap install lazygit
+# VIM :)
+snap install neovim
+
+# ------------------------------------------------------ TUI
+# pretty top
+snap install btop
+snap install gotop

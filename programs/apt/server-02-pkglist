@@ -1,0 +1,43 @@
+#!/bin/sh
+
+# ------------------------------------------------------ Languages
+# C/C++
+apt install gcc cmake
+
+# ------------------------------------------------------ Dev
+# git TUI
+apt install lazygit
+# VIM :)
+apt install neovim
+
+# ------------------------------------------------------ TUI
+# pretty cat
+apt install bat
+# passwords manager
+apt install bitwarden-cli
+# pretty top
+apt install htop
+# file change monitor
+apt install fswatch
+# fuzzy finder
+apt install fzf
+# JSON processor
+apt install jq
+# Web navigator
+apt install links
+# Welcome TUI
+apt install neofetch
+# File manager
+apt install ranger
+# speedtest
+apt install speedtest
+# symlink farm manager
+apt install stow
+# TCP comm
+apt install telnet
+# terminal multiplexer
+apt install tmux
+# dir tree
+apt install tree
+# web downloader
+apt install wget

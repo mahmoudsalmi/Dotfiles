@@ -1,0 +1,41 @@
+#!/bin/sh
+
+# ------------------------------------------------------ BAT
+if [[ -f /usr/bin/batcat ]]; then
+  ln -s /usr/bin/batcat /usr/bin/bat
+fi
+
+
+# ------------------------------------------------------ NodeJs
+if ! command -v nvm >/dev/null 2>&1; then
+  curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+fi
+if command -v nvm >/dev/null 2>&1; then
+  # install last nodejs/npm
+  nvm install --lts --latest-npm
+
+  # install tools
+  npm install -g @bitwarden/cli
+fi
+
+
+# ------------------------------------------------------ Rust
+if ! command -v cargo >/dev/null 2>&1; then
+  # install rustup
+  curl https://sh.rustup.rs -sSf | sh
+fi
+if command -v cargo >/dev/null 2>&1; then
+  # pretty ls
+  cargo install exa
+  # power find
+  cargo install fd
+  # pretty ps
+  cargo install procs
+  # pretty grep [rg]
+  cargo install ripgrep
+  # prompt
+  starship
+fi
+
+# ------------------------------------------------------ Starship
+ sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- --yes

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# ------------------------------------------------------ Audit
+systemctl enable vnstat.service

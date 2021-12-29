@@ -6,11 +6,15 @@ apt install zsh
 # ------------------------------------------------------ Languages
 # C/C++
 apt install gcc cmake
+# GO
+apt install golang
 
 # ------------------------------------------------------ Lib
 apt install pkg-config libncursesw5-dev libreadline-dev
 
 # ------------------------------------------------------ Dev
+# sqlite
+apt install sqlite3
 # git TUI
 apt install lazygit
 # VIM :)
@@ -19,8 +23,6 @@ apt install neovim
 # ------------------------------------------------------ TUI
 # pretty cat
 apt install bat
-# passwords manager
-apt install bitwarden-cli
 # pretty top
 apt install htop
 # file change monitor

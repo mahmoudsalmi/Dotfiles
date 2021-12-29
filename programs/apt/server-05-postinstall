@@ -1,14 +1,17 @@
 #!/bin/sh
 
 # ------------------------------------------------------ BAT
-if [[ -f /usr/bin/batcat ]]; then
-  ln -s /usr/bin/batcat /usr/bin/bat
+if [[ command -v batcat ]]; then
+  sudo ln -s $(type batcat) /usr/bin/bat
 fi
 
 
 # ------------------------------------------------------ NodeJs
+export NVM_DIR=~/.config/nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 if ! command -v nvm >/dev/null 2>&1; then
   curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 fi
 if command -v nvm >/dev/null 2>&1; then
   # install last nodejs/npm
@@ -27,16 +30,22 @@ if ! command -v cargo >/dev/null 2>&1; then
 fi
 if command -v cargo >/dev/null 2>&1; then
   # pretty ls
-  cargo install exa
+  if ! command -v exa >/dev/null 2>&1; then
+    cargo install exa
+  fi
   # pretty ps
-  cargo install procs
+  if ! command -v procs >/dev/null 2>&1; then
+    cargo install procs
+  fi
   # pretty grep [rg]
-  cargo install ripgrep
+  if ! command -v ripgrep >/dev/null 2>&1; then
+    cargo install ripgrep
+  fi
 fi
 
 # ------------------------------------------------------ Starship
- sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- --yes
+sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- --yes
 
 # ------------------------------------------------------ Activate ZSH
 chsh "$USER" -s /bin/zsh
-chmod a-x /etc/update-motd.d/*
+sudo chmod a-x /etc/update-motd.d/*

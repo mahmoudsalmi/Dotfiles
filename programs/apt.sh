@@ -15,4 +15,4 @@ sudo sh ./apt/server-03-snaps
 sudo sh ./apt/server-04-services
 
 ### 05 - Post-install
-sudo sh ./apt/server-05-postinstall
+sh ./apt/server-05-postinstall

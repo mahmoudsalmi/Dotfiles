@@ -9,14 +9,13 @@ export NNN_OPTS="ecGiHU"
 n() {
   if [ -n "${NNNLVL}" ] && [ "${NNNLVL:-0}" -ge 1 ]; then
     echo "nnn is already running"
-    exit 2
-  fi
+  elif [[ -x "$NNN_SRC/nnn" ]]; then
+    "$NNN_SRC/nnn" "$@"
 
-  $NNN_SRC/nnn "$@" || exit $?
-
-  if [[ -f "$NNN_TMPFILE" ]]; then
-    . "$NNN_TMPFILE"
-    cat "$NNN_TMPFILE"
-    rm -f "$NNN_TMPFILE" > /dev/null
+    if [[ -f "$NNN_TMPFILE" ]]; then
+      . "$NNN_TMPFILE"
+      cat "$NNN_TMPFILE"
+      rm -f "$NNN_TMPFILE" > /dev/null
+    fi
   fi
 }

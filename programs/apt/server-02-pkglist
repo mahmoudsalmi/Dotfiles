@@ -1,8 +1,14 @@
 #!/bin/sh
 
+# ------------------------------------------------------ Shells
+apt install zsh
+
 # ------------------------------------------------------ Languages
 # C/C++
 apt install gcc cmake
+
+# ------------------------------------------------------ Lib
+apt install pkg-config libncursesw5-dev libreadline-dev
 
 # ------------------------------------------------------ Dev
 # git TUI

@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # ------------------------------------------------------ BAT
-if [[ command -v batcat ]]; then
-  sudo ln -s $(type batcat) /usr/bin/bat
+if command -v batcat; then
+  sudo ln -s "$(type batcat)" /usr/bin/bat
 fi
 
 

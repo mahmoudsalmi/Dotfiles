@@ -48,4 +48,6 @@ sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- --yes
 
 # ------------------------------------------------------ Activate ZSH
 chsh "$USER" -s /bin/zsh
+
+# ------------------------------------------------------ clear motd
 sudo chmod a-x /etc/update-motd.d/*

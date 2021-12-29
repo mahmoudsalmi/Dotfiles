@@ -1,5 +1,5 @@
 #!/bin/zsh
-if [ -f "$HOME/.config/zsh/variables.sh" ]; then
+if [ ! -f "$HOME/.config/zsh/variables.sh" ]; then
   echo "[ERROR] File [$HOME/.config/zsh/variables.sh] not found !!"
   exit 3
 fi

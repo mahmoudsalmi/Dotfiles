@@ -21,6 +21,8 @@ apt install lazygit
 apt install neovim
 
 # ------------------------------------------------------ TUI
+# cURL
+apt install curl
 # pretty cat
 apt install bat
 # pretty top

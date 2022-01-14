@@ -1,0 +1,18 @@
+# ------------------------------------------------------ Languages
+elm-bin                 # elm
+elm-bin-format          # elm-format
+jdk8-adoptopenjdk       # JDK
+jdk11-adoptopenjdk
+jdk15-adoptopenjdk
+
+# ------------------------------------------------------ Dev Tools
+exercism-bin            # https://exercism.org/dashboard
+
+# ------------------------------------------------------ Dev Env
+fnm                     # Js
+gradle-zsh-completion   # Gradle zsh completion
+
+# ------------------------------------------------------ TUI
+brew "gotop"                            # pretty top
+brew "fswatch"                          # file change monitor
+brew "pfetch"                           # Welcome TUI

@@ -1,0 +1,61 @@
+# ------------------------------------------------------ Languages
+base-devel           # base dev packages
+python               # PY
+cmake                # cmake
+kotlin               # KT
+lua                  # lua
+julia                # julia
+scala                # scala
+
+# ------------------------------------------------------ Dev Tools
+lazygit              # git TUI
+neovim               # VIM :)
+tokei                # count code (languages)
+
+# ------------------------------------------------------ Dev Env
+gradle               # Gradle
+maven                # Maven
+
+# ------------------------------------------------------ Fonts
+ttf-iosevka-nerd     # Nerd Font
+
+# ------------------------------------------------------ Library
+imlib2               # Image C library
+harfbuzz             # Text shaping library
+sdl2                 # Simple DirectMedia Layer
+libheif              # HEIF and AVIF
+glew                 # OpenGl
+glfw-x11
+glfw-wayland
+libcaca              # text instead of pixels
+nghttp2              # HTTP/2 C Library
+
+# ------------------------------------------------------ TUI
+brew "bat"                              # pretty cat
+brew "dust"                             # pretty du
+brew "bitwarden-cli"                    # passwords manager
+brew "btop"                             # pretty top
+brew "htop"
+brew "exa"                              # pretty ls
+brew "fd"                               # power find
+brew "ffmpeg"                           # multimedia framework
+brew "fzf"                              # fuzzy finder
+brew "github-cli"                       # Github
+brew "imagemagick"                      # Manipulate images [convert]
+brew "jq"                               # JSON processor
+brew "links"                            # Web navigator
+brew "neofetch"                         # Welcome TUI
+brew "pandoc"                           # Document converter
+
+# TODO
+brew "procs"                            # pretty ps
+brew "ranger"                           # File manager
+brew "ripgrep"                          # pretty grep [rg]
+brew "teamookla/speedtest/speedtest"    # speedtest
+brew "starship"                         # prompt
+brew "stow"                             # symlink farm manager
+brew "telnet"                           # TCP comm
+brew "tmux"                             # terminal multiplexer
+brew "tree"                             # dir tree
+brew "wget"                             # web downloader
+brew "youtube-dl"                       # youtube downloader

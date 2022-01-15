@@ -246,32 +246,34 @@ alias klint="cd ~/_work/_wk/_repo/Front/KOLFront; ng lint"
 #                               StartUp
 # =============================================================================
 
-# NVM
-export NVM_DIR=~/.config/nvm
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# FNM
+eval "$(fnm env --use-on-cd)"
 
 # Starship Prompt
 eval "$(starship init zsh)"
 
-neofetch
-
+# Haskell
 [ -f "/Users/mahmoud.salmi/.ghcup/env" ] && source "/Users/mahmoud.salmi/.ghcup/env" # ghcup-env
 
+# nnn file manager
 [ -f "$HOME/.config/nnn/init_nnn.zsh" ] && source "$HOME/.config/nnn/init_nnn.zsh"
 
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/mahmoud.salmi/.local/lib/miniconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/mahmoud.salmi/.local/lib/miniconda/etc/profile.d/conda.sh" ]; then
-        . "/Users/mahmoud.salmi/.local/lib/miniconda/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/mahmoud.salmi/.local/lib/miniconda/bin:$PATH"
-    fi
-fi
-unset __conda_setup
+# __conda_setup="$('/Users/mahmoud.salmi/.local/lib/miniconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/Users/mahmoud.salmi/.local/lib/miniconda/etc/profile.d/conda.sh" ]; then
+#         . "/Users/mahmoud.salmi/.local/lib/miniconda/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/Users/mahmoud.salmi/.local/lib/miniconda/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
 # <<< conda initialize <<<
 
+
+
+neofetch

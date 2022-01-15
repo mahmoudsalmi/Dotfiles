@@ -26,36 +26,32 @@ sdl2                 # Simple DirectMedia Layer
 libheif              # HEIF and AVIF
 glew                 # OpenGl
 glfw-x11
-glfw-wayland
 libcaca              # text instead of pixels
 nghttp2              # HTTP/2 C Library
 
 # ------------------------------------------------------ TUI
-brew "bat"                              # pretty cat
-brew "dust"                             # pretty du
-brew "bitwarden-cli"                    # passwords manager
-brew "btop"                             # pretty top
-brew "htop"
-brew "exa"                              # pretty ls
-brew "fd"                               # power find
-brew "ffmpeg"                           # multimedia framework
-brew "fzf"                              # fuzzy finder
-brew "github-cli"                       # Github
-brew "imagemagick"                      # Manipulate images [convert]
-brew "jq"                               # JSON processor
-brew "links"                            # Web navigator
-brew "neofetch"                         # Welcome TUI
-brew "pandoc"                           # Document converter
-
-# TODO
-brew "procs"                            # pretty ps
-brew "ranger"                           # File manager
-brew "ripgrep"                          # pretty grep [rg]
-brew "teamookla/speedtest/speedtest"    # speedtest
-brew "starship"                         # prompt
-brew "stow"                             # symlink farm manager
-brew "telnet"                           # TCP comm
-brew "tmux"                             # terminal multiplexer
-brew "tree"                             # dir tree
-brew "wget"                             # web downloader
-brew "youtube-dl"                       # youtube downloader
+bat                        # pretty cat
+dust                       # pretty du
+bitwarden-cli              # passwords manager
+btop                       # pretty top
+htop
+exa                        # pretty ls
+fd                         # power find
+ffmpeg                     # multimedia framework
+fzf                        # fuzzy finder
+github-cli                 # Github
+imagemagick                # Manipulate images [convert]
+jq                         # JSON processor
+links                      # Web navigator
+neofetch                   # Welcome TUI
+pandoc                     # Document converter
+procs                      # pretty ps
+ranger                     # File manager
+ripgrep                    # pretty grep [rg]
+starship                   # prompt
+stow                       # symlink farm manager
+inetutils                  # TCP comm
+tmux                       # terminal multiplexer
+tree                       # dir tree
+wget                       # web downloader
+youtube-dl                 # youtube downloader

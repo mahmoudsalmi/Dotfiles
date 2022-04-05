@@ -44,7 +44,7 @@ zplug "larkery/zsh-histdb", use:"{sqlite-history,histdb-interactive}.zsh"
 zplug "zdharma-continuum/fast-syntax-highlighting"
 
 zplug "plugins/command-not-found", from:oh-my-zsh
-zplug "plugins/copydir",           from:oh-my-zsh
+zplug "plugins/copypath",           from:oh-my-zsh
 zplug "plugins/copyfile",          from:oh-my-zsh
 zplug "plugins/dircycle",          from:oh-my-zsh
 zplug "plugins/encode64",          from:oh-my-zsh
@@ -247,7 +247,12 @@ alias klint="cd ~/_work/_wk/_repo/Front/KOLFront; ng lint"
 # =============================================================================
 
 # FNM
-eval "$(fnm env --use-on-cd)"
+if [ -d $HOME/.fnm ]; then
+    export PATH=$HOME/.fnm:$PATH
+    eval "`fnm env`"
+elif command -v fnm; then
+    eval "$(fnm env --use-on-cd)"
+fi
 
 # Starship Prompt
 eval "$(starship init zsh)"
@@ -274,6 +279,5 @@ eval "$(starship init zsh)"
 # unset __conda_setup
 # <<< conda initialize <<<
 
-
-
 neofetch
+

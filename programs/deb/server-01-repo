@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# ------------------------------------------------------ Tiers
+# lazy-git repo]
+# TODO: Deprecated
+# add-apt-repository ppa:lazygit-team/release
+
+# speedtest pgp
+curl -s https://install.speedtest.net/app/cli/install.deb.sh | sudo bash

@@ -27,6 +27,9 @@ fi
 
 # custom PATH
 export PATH=$HOME/.local/bin:$PATH:$HOME/.cargo/bin
+if [ -d /snap/bin ]; then
+    export PATH=/snap/bin:$PATH
+fi
 
 # ========================================================================
 # 				ZSH | Plugins

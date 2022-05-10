@@ -29,6 +29,9 @@ fi
 
 # ------------------------------------------------------ Rust
 export PATH=$PATH:$HOME/.cargo/bin
+if [ -d /snap/bin ]; then 
+  export PATH=/snap/bin:$PATH
+fi
 if ! command -v cargo >/dev/null 2>&1; then
   # install rustup
   curl https://sh.rustup.rs -sSf | sh

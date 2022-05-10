@@ -1,0 +1,16 @@
+#!/bin/sh
+
+
+# ------------------------------------------------------ Init snap
+sudo apt install snapd
+sudo snap install core
+
+# ------------------------------------------------------ Dev
+# git TUI
+snap install lazygit
+
+# ------------------------------------------------------ TUI
+# pretty top
+snap install btop
+# pretty ps
+snap install procs

@@ -1,0 +1,60 @@
+#!/bin/sh
+
+# ------------------------------------------------------ BAT
+if command -v batcat; then
+  sudo ln -s "$(type batcat)" /usr/bin/bat
+fi
+
+
+# ------------------------------------------------------ NodeJs
+if [ -d $HOME/.fnm ]; then
+  export PATH=$HOME/.fnm:$PATH
+elif ! command -v fnm >/dev/null 2>&1; then
+  curl -fsSL https://fnm.vercel.app/install | bash
+  export PATH=$PATH:$HOME/.fnm
+fi
+
+
+if command -v fnm >/dev/null 2>&1; then
+  eval "$(fnm env --use-on-cd)"
+  
+  # install last nodejs/npm
+  fnm install --lts 
+
+  # install tools
+  npm install -g npm
+  npm install -g @bitwarden/cli
+fi
+
+
+# ------------------------------------------------------ Rust
+export PATH=$PATH:$HOME/.cargo/bin
+if ! command -v cargo >/dev/null 2>&1; then
+  # install rustup
+  curl https://sh.rustup.rs -sSf | sh
+fi
+if command -v cargo >/dev/null 2>&1; then
+  # pretty ls
+  if ! command -v exa >/dev/null 2>&1; then
+    cargo install exa
+  fi
+  # pretty ps
+  if ! command -v procs >/dev/null 2>&1; then
+    cargo install procs
+  fi
+  # pretty grep [rg]
+  if ! command -v rg >/dev/null 2>&1; then
+    cargo install ripgrep
+  fi
+fi
+
+# ------------------------------------------------------ Starship
+if ! command -v starship >/dev/null 2>&1; then
+  sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- --yes
+fi
+
+# ------------------------------------------------------ Activate ZSH
+chsh "$USER" -s /bin/zsh
+
+# ------------------------------------------------------ clear motd
+sudo chmod a-x /etc/update-motd.d/*

@@ -1,0 +1,57 @@
+#!/bin/sh
+
+# ------------------------------------------------------ Shells
+apt install zsh -y 
+
+# ------------------------------------------------------ Languages
+# C/C++
+apt install gcc cmake -y
+# GO
+apt install golang -y
+
+# ------------------------------------------------------ Lib
+apt install pkg-config libncursesw5-dev libreadline-dev -y
+
+# ------------------------------------------------------ Dev
+# sqlite
+apt install sqlite3 -y
+# git TUI
+apt install lazygit -y 
+# VIM :)
+apt install neovim -y
+
+# ------------------------------------------------------ TUI
+# cURL
+apt install curl -y
+# pretty cat
+apt install bat -y
+# pretty top
+apt install htop -y
+# file change monitor
+apt install fswatch -y
+# fuzzy finder
+apt install fzf -y
+# JSON processor
+apt install jq -y
+# Web navigator
+apt install links -y
+# Welcome TUI
+apt install neofetch -y
+# File manager
+apt install ranger -y
+# speedtest
+apt install speedtest -y
+# symlink farm manager
+apt install stow -y
+# TCP comm
+apt install telnet -y
+# terminal multiplexer
+apt install tmux -y
+# dir tree
+apt install tree -y
+# web downloader
+apt install wget -y
+# pretty ls 
+apt install exa -y
+# pretty grep 
+apt install ripgrep -y 

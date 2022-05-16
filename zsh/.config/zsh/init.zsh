@@ -254,7 +254,7 @@ alias klint="cd ~/_work/_wk/_repo/Front/KOLFront; ng lint"
 if [ -d $HOME/.fnm ]; then
     export PATH=$HOME/.fnm:$PATH
     eval "`fnm env`"
-elif command -v fnm; then
+elif command -v fnm > /dev/null; then
     eval "$(fnm env --use-on-cd)"
 fi
 

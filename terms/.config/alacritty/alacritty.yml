@@ -16,22 +16,25 @@ scrolling:
 font:
   normal:
     # family: Source Code Pro
-    family: MesloLGS NF
-    # family: Fira Code
+    # family: MesloLGS NF
+    family: FiraCode Nerd Font Mono
     style: Regular
   bold:
     # family: Source Code Pro
-    family: MesloLGS NF
+    # family: MesloLGS NF
+    family: FiraCode Nerd Font Mono
     # family: Fira Code
     style: Bold
   italic:
     # family: Source Code Pro
-    family: MesloLGS NF
+    # family: MesloLGS NF
+    family: FiraCode Nerd Font Mono
     # family: Fira Code
     style: Italic
   bold_italic:
     # family: Source Code Pro
-    family: MesloLGS NF
+    # family: MesloLGS NF
+    family: FiraCode Nerd Font Mono
     # family: Fira Code
     style: Bold Italic
   size: 14.0

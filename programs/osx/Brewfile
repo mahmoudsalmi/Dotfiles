@@ -26,6 +26,7 @@ brew "libtool"
 brew "automake"
 brew "gettext"
 brew "curl"
+brew "gnu-sed"
 brew "elm"              # Elm
 brew "elm-format"
 brew "adoptopenjdk8"    # JAVA
@@ -38,7 +39,7 @@ cask "julia"            # JL
 # ------------------------------------------------------ Dev
 brew "exercism"         # https://exercism.org/dashboard
 brew "lazygit"          # git TUI
-brew "neovim"           # VIM :)
+# brew "neovim"           # VIM :) => build from source
 brew "tokei"            # count code (languages)
 
 # ------------------------------------------------------ Dev Env

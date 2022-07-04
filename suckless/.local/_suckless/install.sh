@@ -34,7 +34,7 @@ suckless_get_sources() {
 suckless_install() {
   suckless_get_sources
   cd "$SL_MODULE_SRC" || exit 1
-  make "$SL_MODULE_OPTS" && sudo make install
+  make "$SL_MODULE_OPTS" && make install
 }
 
 #----------------------------------------------------- nnn
@@ -56,11 +56,23 @@ install_zplug() {
   suckless_get_sources
 }
 
+#----------------------------------------------------- mahmoudsalmi/neovim
+install_neovim() {
+  reset_env
+  export SL_MODULE_SRC="$MS_SL_REPO/neovim"
+  export SL_MODULE_URL="https://github.com/mahmoudsalmi/neovim"
+  export SL_MODULE_OPTS="CMAKE_BUILD_TYPE=Release"
+
+  suckless_install
+}
+
 #----------------------------------------------------- COMMANDS
 install_all() {
   install_zplug
   install_nnn
+  install_neovim
 }
 
 #----------------------------------------------------- RUN
 install_all
+

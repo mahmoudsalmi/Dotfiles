@@ -21,6 +21,11 @@ brew "python@3.9"
 brew "glib"             # C / C++
 brew "pkg-config"
 brew "cmake"
+brew "ninja"
+brew "libtool"
+brew "automake"
+brew "gettext"
+brew "curl"
 brew "elm"              # Elm
 brew "elm-format"
 brew "adoptopenjdk8"    # JAVA

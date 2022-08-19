@@ -1,0 +1,57 @@
+# ------------------------------------------------------ Languages
+base-devel           # base dev packages
+python               # PY
+cmake                # cmake
+kotlin               # KT
+lua                  # lua
+# julia                # julia
+# scala                # scala
+
+# ------------------------------------------------------ Dev Tools
+lazygit              # git TUI
+neovim               # VIM :)
+tokei                # count code (languages)
+
+# ------------------------------------------------------ Dev Env
+# gradle               # Gradle
+maven                # Maven
+
+# ------------------------------------------------------ Fonts
+ttf-iosevka-nerd     # Nerd Font
+
+# ------------------------------------------------------ Library
+imlib2               # Image C library
+harfbuzz             # Text shaping library
+sdl2                 # Simple DirectMedia Layer
+libheif              # HEIF and AVIF
+glew                 # OpenGl
+glfw-x11
+libcaca              # text instead of pixels
+# nghttp2              # HTTP/2 C Library
+
+# ------------------------------------------------------ TUI
+bat                        # pretty cat
+dust                       # pretty du
+bitwarden-cli              # passwords manager
+btop                       # pretty top
+htop
+exa                        # pretty ls
+fd                         # power find
+ffmpeg                     # multimedia framework
+fzf                        # fuzzy finder
+github-cli                 # Github
+imagemagick                # Manipulate images [convert]
+jq                         # JSON processor
+links                      # Web navigator
+neofetch                   # Welcome TUI
+# pandoc                     # Document converter
+procs                      # pretty ps
+ranger                     # File manager
+ripgrep                    # pretty grep [rg]
+starship                   # prompt
+stow                       # symlink farm manager
+inetutils                  # TCP comm
+tmux                       # terminal multiplexer
+tree                       # dir tree
+wget                       # web downloader
+youtube-dl                 # youtube downloader

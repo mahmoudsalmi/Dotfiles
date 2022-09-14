@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if command -v npm > /dev/null; then
-  npm i -g \
+  npm i --location=global \
     pnpm \
     npm \
     degit \

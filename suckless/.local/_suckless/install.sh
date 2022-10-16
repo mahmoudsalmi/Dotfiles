@@ -34,7 +34,7 @@ suckless_get_sources() {
 suckless_install() {
   suckless_get_sources
   cd "$SL_MODULE_SRC" || exit 1
-  make "$SL_MODULE_OPTS" && make install
+  make "$SL_MODULE_OPTS" && sudo make install
 }
 
 #----------------------------------------------------- nnn

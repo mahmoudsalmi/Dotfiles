@@ -2,8 +2,8 @@
 elm-bin                 # elm
 elm-format-bin          # elm-format
 jdk8-adoptopenjdk       # JDK
-jdk11-adoptopenjdk
-jdk15-adoptopenjdk
+#jdk11-adoptopenjdk
+#jdk15-adoptopenjdk
 
 # ------------------------------------------------------ Dev Tools
 exercism-bin            # https://exercism.org/dashboard

@@ -2,6 +2,7 @@
 
 if command -v npm > /dev/null; then
   npm i --location=global \
+    yarn \
     pnpm \
     npm \
     degit \

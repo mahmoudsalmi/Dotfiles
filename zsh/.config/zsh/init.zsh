@@ -267,6 +267,10 @@ eval "$(starship init zsh)"
 # nnn file manager
 [ -f "$HOME/.config/nnn/init_nnn.zsh" ] && source "$HOME/.config/nnn/init_nnn.zsh"
 
+# sdkman
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
+
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

@@ -1,10 +1,11 @@
 #!/bin/zsh
-if [ ! -f "$HOME/.config/zsh/variables.sh" ]; then
-  echo "[ERROR] File [$HOME/.config/zsh/variables.sh] not found !!"
+export vars_path="$HOME/.config/zsh/core/01_variables.sh" 
+if [ ! -f "$vars_path" ]; then
+  echo "[ERROR] File [$vars_path] not found !!"
   exit 3
 fi
 
-source "$HOME/.config/zsh/variables.sh"
+source "$vars_path"
 
 if [ -z "$MS_GIT_REPOS" ]; then
   echo "[ERROR] Variable [MS_GIT_REPOS] is not defined !"
@@ -17,5 +18,4 @@ if [ -z "$1" ]; then
 fi
 
 git init --bare --shared "$MS_GIT_REPOS/$1.git" && echo "[DONE]"
-
 

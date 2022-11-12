@@ -26,3 +26,9 @@ export MS_GIT_REPOS="$HOME/msdata/git/"
 
 # ZPLUG_HOME
 export ZPLUG_HOME="$MS_SL_REPO/zplug"
+
+
+# ========================================================================
+# 	                    Load custom Variables
+# ========================================================================
+[ -f "$MS_ZSH_CONFIG/custom/01_variables.zsh" ] && source "$MS_ZSH_CONFIG/custom/01_variables.zsh"

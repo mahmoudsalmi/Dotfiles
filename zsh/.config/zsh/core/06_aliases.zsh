@@ -11,3 +11,7 @@ alias ll='exa -l --color=always --group --group-directories-first'  # long forma
 alias lt='exa -l -snew --color=always --group --group-directories-first' # tree listing
 alias l='exa -al -snew --color=always --group --group-directories-first'
 
+# =============================================================================
+#                                 Custom Alias
+# =============================================================================
+[ -f "$MS_ZSH_CONFIG/custom/06_aliases.zsh" ] && source "$MS_ZSH_CONFIG/custom/06_aliases.zsh"

@@ -36,3 +36,7 @@ if zplug check "zsh-users/zsh-history-substring-search"; then
     bindkey "^[[1;5B" history-substring-search-down
 fi
 
+# =============================================================================
+#                                custom Key Bindings
+# =============================================================================
+[ -f "$MS_ZSH_CONFIG/custom/04_keybindings.zsh" ] && source "$MS_ZSH_CONFIG/custom/04_keybindings.zsh"

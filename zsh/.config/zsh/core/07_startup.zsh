@@ -63,3 +63,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 eval "$(starship init zsh)"
 
 
+# =============================================================================
+#                               Custom StartUp
+# =============================================================================
+[ -f "$MS_ZSH_CONFIG/custom/07_startup.zsh" ] && source "$MS_ZSH_CONFIG/custom/07_startup.zsh"

@@ -37,3 +37,7 @@ setopt pushd_ignore_dups
 setopt share_history            # Share history between multiple shells
 setopt transient_rprompt
 
+# ========================================================================
+# 				ZSH | custom Options
+# ========================================================================
+[ -f "$MS_ZSH_CONFIG/custom/03_opts.zsh" ] && source "$MS_ZSH_CONFIG/custom/03_opts.zsh"

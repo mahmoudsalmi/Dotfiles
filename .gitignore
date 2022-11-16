@@ -4,3 +4,4 @@ nvim/.config/nvim/plugged/
 
 zsh/.config/btop/btop.log
 zsh/.config/nnn/bookmarks/cookie-sandbox
+**/.DS_Store

@@ -1,7 +1,7 @@
 # ------------------------------------------------------ Languages
 elm-bin                 # elm
 elm-format-bin          # elm-format
-jdk8-adoptopenjdk       # JDK
+#jdk8-adoptopenjdk       # JDK
 #jdk11-adoptopenjdk
 #jdk15-adoptopenjdk
 
@@ -13,6 +13,6 @@ fnm                     # Js
 gradle-zsh-completion   # Gradle zsh completion
 
 # ------------------------------------------------------ TUI
-gotop                            # pretty top
+#gotop                            # pretty top
 fswatch                          # file change monitor
 pfetch                           # Welcome TUI

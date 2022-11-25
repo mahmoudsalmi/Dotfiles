@@ -2,7 +2,8 @@
 
 # ------------------------------------------------------ BAT
 if command -v batcat; then
-  sudo ln -s "$(type batcat)" /usr/bin/bat
+  cd /usr/bin
+  sudo ln -s "$(type batcat)" bat
 fi
 
 
@@ -23,7 +24,6 @@ if command -v fnm >/dev/null 2>&1; then
 
   # install tools
   npm install -g npm
-  npm install -g @bitwarden/cli
 fi
 
 
@@ -61,3 +61,4 @@ chsh "$USER" -s /bin/zsh
 
 # ------------------------------------------------------ clear motd
 sudo chmod a-x /etc/update-motd.d/*
+sudo echo "" > /etc/motd

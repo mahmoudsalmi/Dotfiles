@@ -40,7 +40,7 @@ apt install neofetch -y
 # File manager
 apt install ranger -y
 # speedtest
-apt install speedtest -y
+# apt install speedtest -y
 # symlink farm manager
 apt install stow -y
 # TCP comm

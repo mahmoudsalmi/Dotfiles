@@ -2,47 +2,47 @@ env:
   TERM: xterm-256color
 window:
   padding:
-    x: 10
-    y: 10
+    x: 6
+    y: 6
   dynamic_padding: false
   title: Alacritty
   class:
     instance: Alacritty
     general: Alacritty
+  opacity: 0.95
 
 scrolling:
   history: 10000
 
 font:
   normal:
-    # family: Source Code Pro
-    family: MesloLGS Nerd Font
+    family: Source Code Pro
+    # family: MesloLGS Nerd Font
     # family: NotoSansMono Nerd Font
-    # family: Fira Code
+    #family: Fira Code Nerd Font
     style: Regular
   bold:
-    # family: Source Code Pro
-    family: MesloLGS Nerd Font
+    family: Source Code Pro
+    # family: MesloLGS Nerd Font
     # family: NotoSansMono Nerd Font
-    # family: Fira Code
+    # family: Fira Code Nerd Font
     style: Bold
   italic:
-    # family: Source Code Pro
-    family: MesloLGS Nerd Font
+    family: Source Code Pro
+    # family: MesloLGS Nerd Font
     # family: NotoSansMono Nerd Font
-    # family: Fira Code
+    # family: Fira Code Nerd Font
     style: Italic
   bold_italic:
-    # family: Source Code Pro
-    family: MesloLGS Nerd Font
+    family: Source Code Pro
+    # family: MesloLGS Nerd Font
     # family: NotoSansMono Nerd Font
-    # family: Fira Code
+    # family: Fira Code Nerd Font
     style: Bold Italic
-  size: 12.0
+  size: 9.0
   offset:
     x: 1
-    y: 4
-
+    y: 1
 schemes:
   LEGACY: &LEGACY
     primary:

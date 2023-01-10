@@ -11,6 +11,8 @@ alias ll='exa -l --color=always --group --group-directories-first'  # long forma
 alias lt='exa -l -snew --color=always --group --group-directories-first' # tree listing
 alias l='exa -al -snew --color=always --group --group-directories-first'
 
+alias :q=exit
+
 # =============================================================================
 #                                 Custom Alias
 # =============================================================================

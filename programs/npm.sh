@@ -1,10 +1,12 @@
 #!/bin/sh
 
 if command -v npm > /dev/null; then
-  npm i --location=global \
+  npm i -g npm
+  npm i --location=global pnpm
+
+  pnpm i -g \
     yarn \
     pnpm \
-    npm \
     degit \
     eslint \
 		ls_emmet \
@@ -12,5 +14,6 @@ if command -v npm > /dev/null; then
 		prettier \
 		sass \
 		typescript-language-server \
-		typescript
+		typescript \
+    svelte-language-server
 fi

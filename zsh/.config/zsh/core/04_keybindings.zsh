@@ -23,7 +23,7 @@ bindkey "^[[1;5D" backward-word
 bindkey '^v' edit-command-line
 
 # search in current PWD
-bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
+bindkey -s '^f' 'fzfp\n'
 
 # searh caret
 if zplug check "larkery/zsh-histdb"; then

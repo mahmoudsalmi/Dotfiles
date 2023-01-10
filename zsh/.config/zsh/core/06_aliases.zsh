@@ -11,7 +11,22 @@ alias ll='exa -l --color=always --group --group-directories-first'  # long forma
 alias lt='exa -l -snew --color=always --group --group-directories-first' # tree listing
 alias l='exa -al -snew --color=always --group --group-directories-first'
 
+alias fzfp="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
+
 alias :q=exit
+
+
+# =============================================================================
+#                                Funtions
+# =============================================================================
+
+batdiff() {
+    git diff --name-only --relative --diff-filter=d | xargs bat --diff
+}
+
+t() {
+    tail -f "$@" | bat --paging=never -l log
+}
 
 # =============================================================================
 #                                 Custom Alias

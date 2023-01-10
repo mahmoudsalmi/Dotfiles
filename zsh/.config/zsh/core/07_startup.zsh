@@ -31,6 +31,11 @@ elif command -v fnm > /dev/null; then
     eval "$(fnm env --use-on-cd)"
 fi
 
+# ---------------------------------------------------------- Nodejs [PNPM]
+export PNPM_HOME=$HOME/.local/share/pnpm
+mkdir -p $PNPM_HOME
+export PATH=$PNPM_HOME:$PATH
+
 # ---------------------------------------------------------- Haskell [GHC]
 # [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
 

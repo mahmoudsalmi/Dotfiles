@@ -7,9 +7,6 @@ autoload edit-command-line; zle -N edit-command-line
 # Enable colors and change prompt:
 autoload -Uz colors && colors
 
-# Basic auto/tab complete:
-autoload -Uz compinit
-
 setopt autocd                   # Allow changing directories without `cd`
 setopt append_history           # Dont overwrite history
 setopt auto_list

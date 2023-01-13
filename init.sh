@@ -4,6 +4,7 @@ mkdir -p "$HOME/.local"
 mkdir -p "$HOME/.local/_suckless"
 mkdir -p "$HOME/.local/bin"
 mkdir -p "$HOME/.local/scripts"
+mkdir -p "$HOME/.local/share/zsh/site-functions"
 
 mkdir -p "$HOME/.config"
 mkdir -p "$HOME/.config/nvim"

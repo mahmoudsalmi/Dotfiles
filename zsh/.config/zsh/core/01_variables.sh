@@ -27,6 +27,8 @@ export MS_GIT_REPOS="$HOME/msdata/git/"
 # ZPLUG_HOME
 export ZPLUG_HOME="$MS_SL_REPO/zplug"
 
+# docker-tools Variables
+export DOCKER_TOOLS_VOLUMES_BKP="$HOME/_docker/_volumes/"
 
 # ========================================================================
 # 	                    Load custom Variables

@@ -7,6 +7,9 @@ neofetch
 #                               $PATH
 # =============================================================================
 
+# ---------------------------------------------------------- Lua [PATH Lua]
+[ -d $HOME/.luarocks/bin ] && export PATH=$HOME/.luarocks/bin:$PATH
+
 # ---------------------------------------------------------- Rust [PATH cargo]
 [ -d $HOME/.cargo/bin ] && export PATH=$HOME/.cargo/bin:$PATH
 

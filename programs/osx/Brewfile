@@ -7,9 +7,9 @@ tap "homebrew/bundle"
 tap "homebrew/services"
 
 # ------------------------------------------------------ Tiers
-tap "mongodb/brew"          # MongoDB
+#tap "mongodb/brew"          # MongoDB
 tap "teamookla/speedtest"   # speedtest
-tap "adoptopenjdk/openjdk"  # JDK
+#tap "adoptopenjdk/openjdk"  # JDK
 
 # ---------------------------------------------------------------------------------------------- Install
 # ------------------------------------------------------ Package Manager
@@ -28,11 +28,11 @@ brew "gettext"
 brew "curl"
 brew "gnu-sed"
 brew "elm"              # Elm
-brew "elm-format"
-brew "adoptopenjdk8"    # JAVA
-brew "adoptopenjdk15"
-brew "adoptopenjdk"
-brew "kotlin"           # KT
+#brew "elm-format"
+#brew "adoptopenjdk8"    # JAVA
+#brew "adoptopenjdk15"
+#brew "adoptopenjdk"
+#brew "kotlin"           # KT
 brew "lua"              # LUA
 cask "julia"            # JL
 
@@ -44,17 +44,17 @@ brew "tokei"            # count code (languages)
 
 # ------------------------------------------------------ Dev Env
 brew "fnm"                  # Js
-brew "gradle"               # Gradle
-brew "gradle-completion"
-brew "maven"                # Maven
+#brew "gradle"               # Gradle
+#brew "gradle-completion"
+#brew "maven"                # Maven
 
 # ------------------------------------------------------ Dev DB
 brew "groonga"                                                  # fast and accurate full text search engine
 brew "redis", restart_service: true                             # Redis [redis-cli]
-brew "mariadb", restart_service: true                           # MariaDB
-brew "postgresql", restart_service: true                        # postgresql
-brew "mongodb/brew/mongodb-community", restart_service: true    # mongodb
-cask "sqlpro-for-mssql"                                         # MSSql client
+#brew "mariadb", restart_service: true                           # MariaDB
+#brew "postgresql", restart_service: true                        # postgresql
+#brew "mongodb/brew/mongodb-community", restart_service: true    # mongodb
+#cask "sqlpro-for-mssql"                                         # MSSql client
 
 # ------------------------------------------------------ Fonts
 cask "font-hack-nerd-font"  # Nerd Font

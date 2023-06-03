@@ -60,7 +60,7 @@ install_zplug() {
 install_neovim() {
   reset_env
   export SL_MODULE_SRC="$MS_SL_REPO/neovim"
-  export SL_MODULE_URL="https://github.com/mahmoudsalmi/neovim"
+  export SL_MODULE_URL="https://github.com/neovim/neovim"
   export SL_MODULE_OPTS="CMAKE_BUILD_TYPE=Release"
 
   suckless_install

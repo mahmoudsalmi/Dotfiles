@@ -1,0 +1,3 @@
+require "msdev"
+
+print("hello")

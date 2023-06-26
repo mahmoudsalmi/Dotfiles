@@ -29,6 +29,7 @@ export ZPLUG_HOME="$MS_SL_REPO/zplug"
 
 # docker-tools Variables
 export DOCKER_TOOLS_VOLUMES_BKP="$HOME/_docker/_volumes/"
+#export DOCKER_TOOLS_CONTAINER="$HOME/.rd/bin/nerdctl"
 
 # ========================================================================
 # 	                    Load custom Variables

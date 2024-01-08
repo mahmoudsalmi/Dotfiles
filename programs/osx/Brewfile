@@ -16,8 +16,8 @@ tap "teamookla/speedtest"   # speedtest
 brew "mas"              # App Store
 
 # ------------------------------------------------------ Languages
-brew "python@3.10"      # PY
-brew "python@3.9"
+#brew "python@3.10"      # PY
+#brew "python@3.9"
 brew "glib"             # C / C++
 brew "pkg-config"
 brew "cmake"

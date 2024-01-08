@@ -1,11 +1,9 @@
 # =============================================================================
-#                               Welcome
-# =============================================================================
-neofetch
-
-# =============================================================================
 #                               $PATH
 # =============================================================================
+
+# ---------------------------------------------------------- Brew [PATH]
+[ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # ---------------------------------------------------------- Lua [PATH Lua]
 [ -d $HOME/.luarocks/bin ] && export PATH=$HOME/.luarocks/bin:$PATH
@@ -19,8 +17,13 @@ neofetch
 # ---------------------------------------------------------- Snap [PATH]
 [ -d /snap/bin ] && export PATH=/snap/bin:$PATH
 
-# ---------------------------------------------------------- Rust [PATH cargo]
+# ---------------------------------------------------------- local bin [PATH]
 [ -d $HOME/.local/bin ] && export PATH=$HOME/.local/bin:$PATH
+
+# =============================================================================
+#                               Welcome
+# =============================================================================
+neofetch
 
 # =============================================================================
 #                              Development
@@ -32,6 +35,11 @@ if [ -d $HOME/.fnm ]; then
     eval "`fnm env`"
 elif command -v fnm > /dev/null; then
     eval "$(fnm env --use-on-cd)"
+fi
+
+# ---------------------------------------------------------- Nodejs [angular]
+if command -v ng > /dev/null; then
+    source < (ng completion script)
 fi
 
 # ---------------------------------------------------------- Nodejs [PNPM]
@@ -47,18 +55,12 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
 
 
-# ---------------------------------------------------------- python [MiniConda]
-# __conda_setup="$('$HOME/.local/lib/miniconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-# if [ $? -eq 0 ]; then
-#     eval "$__conda_setup"
-# else
-#     if [ -f "$HOME/.local/lib/miniconda/etc/profile.d/conda.sh" ]; then
-#         . "$HOME/.local/lib/miniconda/etc/profile.d/conda.sh"
-#     else
-#         export PATH="$HOME/.local/lib/miniconda/bin:$PATH"
-#     fi
-# fi
-# unset __conda_setup
+# ---------------------------------------------------------- python [Pyenv]
+if [ -d $HOME/.pyenv ]; then
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init -)"
+fi
 
 # =============================================================================
 #                               StartUp Tools

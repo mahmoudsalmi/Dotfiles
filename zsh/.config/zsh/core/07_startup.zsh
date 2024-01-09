@@ -39,7 +39,7 @@ fi
 
 # ---------------------------------------------------------- Nodejs [angular]
 if command -v ng > /dev/null; then
-    source < (ng completion script)
+    source <(ng completion script)
 fi
 
 # ---------------------------------------------------------- Nodejs [PNPM]

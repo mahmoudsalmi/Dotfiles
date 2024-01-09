@@ -58,7 +58,6 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "fdellwing/zsh-bat"
 zplug "wfxr/forgit"
-zplug "ptavares/zsh-sdkman"
 
 # =============================================================================
 #                        Install/Config/Load Plugins

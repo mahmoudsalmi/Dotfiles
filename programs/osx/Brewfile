@@ -58,6 +58,7 @@ brew "redis", restart_service: true                             # Redis [redis-c
 
 # ------------------------------------------------------ Fonts
 cask "font-hack-nerd-font"  # Nerd Font
+cask "font-monaspace"
 
 # ------------------------------------------------------ Library
 brew "imlib2"               # Image C library
@@ -100,6 +101,12 @@ brew "tmux"                             # terminal multiplexer
 brew "tree"                             # dir tree
 brew "wget"                             # web downloader
 brew "youtube-dl"                       # youtube downloader
+
+# ------------------------------------------------------ Fun
+brew "figlet"
+brew "cowsay"
+brew "lolcat"
+brew "fortune"
 
 # ------------------------------------------------------ Audit
 brew "vnstat", restart_service: true        # Network traffic monitor

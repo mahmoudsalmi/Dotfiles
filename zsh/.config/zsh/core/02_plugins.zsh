@@ -38,7 +38,7 @@ if [[ $OSTYPE = (darwin)* ]]; then
     zplug "plugins/brew",          from:oh-my-zsh, if:"(( $+commands[brew] ))"
 fi
 
-zplug "plugins/git",               from:oh-my-zsh, if:"(( $+commands[git] ))"
+#zplug "plugins/git",               from:oh-my-zsh, if:"(( $+commands[git] ))"
 zplug "plugins/golang",            from:oh-my-zsh, if:"(( $+commands[go] ))"
 zplug "plugins/svn",               from:oh-my-zsh, if:"(( $+commands[svn] ))"
 zplug "plugins/node",              from:oh-my-zsh, if:"(( $+commands[node] ))"
@@ -56,6 +56,9 @@ zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-history-substring-search", defer:3
+zplug "fdellwing/zsh-bat"
+zplug "wfxr/forgit"
+zplug "ptavares/zsh-sdkman"
 
 # =============================================================================
 #                        Install/Config/Load Plugins

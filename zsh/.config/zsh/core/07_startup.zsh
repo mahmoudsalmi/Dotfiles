@@ -33,8 +33,10 @@ neofetch
 if [ -d $HOME/.fnm ]; then
     export PATH=$HOME/.fnm:$PATH
     eval "`fnm env`"
+    source <(fnm completions)
 elif command -v fnm > /dev/null; then
     eval "$(fnm env --use-on-cd)"
+    source <(fnm completions)
 fi
 
 # ---------------------------------------------------------- Nodejs [angular]

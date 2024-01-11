@@ -78,7 +78,8 @@ brew "bitwarden-cli"                    # passwords manager
 brew "btop"                             # pretty top
 brew "gotop"
 brew "htop"
-brew "exa"                              # pretty ls
+# brew "exa"                              # pretty ls
+brew "eza"                              # pretty ls
 brew "fd"                               # power find
 brew "ffmpeg"                           # multimedia framework
 brew "fswatch"                          # file change monitor

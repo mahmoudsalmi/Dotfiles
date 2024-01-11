@@ -7,10 +7,10 @@ alias vim=nvim
 
 # alias ls='exa --color=always --group-directories-first' # my preferred listing
 alias ls='ls --color=auto'
-alias la='exa -al --color=always --group --group-directories-first'  # all files and dirs
-alias ll='exa -l --color=always --group --group-directories-first'  # long format
-alias lt='exa -l -snew --color=always --group --group-directories-first' # tree listing
-alias l='exa -al -snew --color=always --group --group-directories-first'
+alias la='eza -al --color=always --group --group-directories-first'  # all files and dirs
+alias ll='eza -l --color=always --group --group-directories-first'  # long format
+alias lt='eza -l -snew --color=always --group --group-directories-first' # tree listing
+alias l='eza -al -snew --color=always --group --group-directories-first'
 
 alias fzfp="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 

@@ -4,6 +4,12 @@
 
 fpath=($HOME/.local/share/zsh/site-functions $fpath)
 
+# ---------------------------------------------------------- Brew [PATH]
+if [ -f /opt/homebrew/bin/brew ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+  fpath=($(brew --prefix)/share/zsh/site-functions ${fpath})
+fi
+
 # Basic auto/tab complete:
 autoload -Uz compinit
 

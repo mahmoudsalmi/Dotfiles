@@ -2,8 +2,6 @@
 #                               $PATH
 # =============================================================================
 
-# ---------------------------------------------------------- Brew [PATH]
-[ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # ---------------------------------------------------------- Lua [PATH Lua]
 [ -d $HOME/.luarocks/bin ] && export PATH=$HOME/.luarocks/bin:$PATH

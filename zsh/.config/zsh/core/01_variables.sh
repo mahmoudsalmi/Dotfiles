@@ -12,6 +12,7 @@ export EDITOR='nvim'
 export SHELL="/bin/zsh"
 export TERM='xterm-256color'
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANROFFOPT="-c"
 
 # History in cache directory:
 export HISTFILE=~/.cache/zsh/history

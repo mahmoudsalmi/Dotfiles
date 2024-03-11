@@ -5,9 +5,9 @@ apt install zsh -y
 
 # ------------------------------------------------------ Languages
 # C/C++
-apt install gcc cmake -y
+# apt install gcc cmake -y
 # GO
-apt install golang -y
+# apt install golang -y
 
 # ------------------------------------------------------ Lib
 apt install pkg-config libncursesw5-dev libreadline-dev -y
@@ -52,6 +52,7 @@ apt install tree -y
 # web downloader
 apt install wget -y
 # pretty ls 
+apt install eza -y
 apt install exa -y
 # pretty grep 
 apt install ripgrep -y 

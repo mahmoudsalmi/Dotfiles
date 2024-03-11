@@ -36,20 +36,20 @@ if ! command -v cargo >/dev/null 2>&1; then
   # install rustup
   curl https://sh.rustup.rs -sSf | sh
 fi
-if command -v cargo >/dev/null 2>&1; then
+#if command -v cargo >/dev/null 2>&1; then
   # pretty ls
-  if ! command -v exa >/dev/null 2>&1; then
-    cargo install exa
-  fi
+  #if ! command -v exa >/dev/null 2>&1; then
+  #  cargo install exa
+  #fi
   # pretty ps
-  if ! command -v procs >/dev/null 2>&1; then
-    cargo install procs
-  fi
+  #if ! command -v procs >/dev/null 2>&1; then
+  #  cargo install procs
+  #fi
   # pretty grep [rg]
-  if ! command -v rg >/dev/null 2>&1; then
-    cargo install ripgrep
-  fi
-fi
+  #if ! command -v rg >/dev/null 2>&1; then
+  #  cargo install ripgrep
+  #fi
+#fi
 
 # ------------------------------------------------------ Starship
 if ! command -v starship >/dev/null 2>&1; then

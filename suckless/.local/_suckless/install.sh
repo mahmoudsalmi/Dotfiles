@@ -26,7 +26,7 @@ reset_env() {
 }
 
 suckless_get_sources() {
-  [ ! -d "$SL_MODULE_SRC" ] && git clone "$SL_MODULE_URL" "$SL_MODULE_SRC"
+  [ ! -d "$SL_MODULE_SRC" ] && git clone --depth=1 "$SL_MODULE_URL" "$SL_MODULE_SRC"
   cd "$SL_MODULE_SRC" || exit 1
   git_reset
 }

@@ -1,5 +1,5 @@
 local wezterm = require('wezterm')
-local _, os_name = require('utils')
+local utils = require('utils')
 
 local config = {}
 
@@ -33,17 +33,20 @@ config.inactive_pane_hsb = {
 -- FIXME: (<- this is an example of bolded text)
 -- 0 1 2 3 4 5 6 7 8 9
 -- Some ligatures: != <-> <-  -> ----> => ==> ===> -- --- /../;;/ #{}
---  <> <!-- --> ->> --> <= >= ++ == === := a::b::c a&&b a||b 
+--  <> <!-- --> ->> --> <= >= ++ == === := a::b::c a&&b a||b
 
 config.color_scheme = 'OneDark (base16)'
 config.font = font_with_fallback("Monaspace Neon")
-function calculate_font_size(os_name)
-  if os_name == 'macos' then 
-    return 15.0 
+
+local function calculate_font_size(uname, osname)
+  wezterm.log_info ("UNAME = "..uname..", OSNAME = "..osname)
+  if osname == 'macos' then
+    return 16.0
   end
-  return 12.0 
+  return 12.0
 end
-config.font_size = calculate_font_size(os_name)
+
+config.font_size = calculate_font_size(utils.os_name())
 config.harfbuzz_features = {
   "zero", -- Use a slashed zero '0' (instead of dotted)
   "kern", -- (default) kerning (todo check what is really is)
@@ -63,7 +66,7 @@ config.window_frame = {
 
   -- The size of the font in the tab bar.
   -- Default to 10.0 on Windows but 12.0 on other systems
-  font_size = 12.0,
+  font_size = config.font_size,
 
   -- The overall background color of the tab bar when
   -- the window is focused

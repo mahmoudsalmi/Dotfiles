@@ -23,10 +23,10 @@ end
 
 M.lines_from = function(file)
   if not M.file_exists(file) then
-    return {} 
+    return {}
   end
   local lines = {}
-  for line in io.lines(file) do 
+  for line in io.lines(file) do
     lines[#lines + 1] = line
   end
   return lines
@@ -58,7 +58,7 @@ M.UNKNOWN_OS = "_UNKNOWN_"
 M.os_name = function()
 
   local uname = M.uname_s()
-  if uname == "darwin" then 
+  if uname == "darwin" then
     return uname, "macos"
   end
 

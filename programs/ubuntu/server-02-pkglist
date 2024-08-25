@@ -36,7 +36,8 @@ apt install jq
 # Web navigator
 apt install links
 # Welcome TUI
-apt install neofetch
+#apt install neofetch
+apt install fastfetch
 # File manager
 apt install ranger
 # speedtest

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # ------------------------------------------------------ Shells
-apt install zsh -y 
+apt install zsh -y
 
 # ------------------------------------------------------ Languages
 # C/C++
@@ -16,7 +16,7 @@ apt install pkg-config libncursesw5-dev libreadline-dev -y
 # sqlite
 apt install sqlite3 -y
 # git TUI
-apt install lazygit -y 
+apt install lazygit -y
 # VIM :)
 apt install neovim -y
 
@@ -36,7 +36,8 @@ apt install jq -y
 # Web navigator
 apt install links -y
 # Welcome TUI
-apt install neofetch -y
+#apt install neofetch -y
+apt install fastfetch -y
 # File manager
 apt install ranger -y
 # speedtest
@@ -51,8 +52,8 @@ apt install tmux -y
 apt install tree -y
 # web downloader
 apt install wget -y
-# pretty ls 
+# pretty ls
 apt install eza -y
 apt install exa -y
-# pretty grep 
-apt install ripgrep -y 
+# pretty grep
+apt install ripgrep -y

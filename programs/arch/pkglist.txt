@@ -43,7 +43,8 @@ github-cli                 # Github
 imagemagick                # Manipulate images [convert]
 jq                         # JSON processor
 links                      # Web navigator
-neofetch                   # Welcome TUI
+#neofetch                   # Welcome TUI
+fastfetch                   # Welcome TUI
 pandoc                     # Document converter
 procs                      # pretty ps
 ranger                     # File manager

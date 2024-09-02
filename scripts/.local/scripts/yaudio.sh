@@ -1,3 +1,3 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 
-youtube-dl -x --audio-format best --audio-quality 0 $1
+yt-dlp -x --audio-format best --audio-quality 0 $1

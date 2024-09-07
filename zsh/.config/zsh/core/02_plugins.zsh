@@ -58,7 +58,7 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "fdellwing/zsh-bat"
 zplug "wfxr/forgit"
-zplug "nix-community/nix-zsh-completions", defer:3
+zplug "zsh-users/zsh-completions", defer:3
 
 # =============================================================================
 #                        Install/Config/Load Plugins

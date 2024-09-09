@@ -10,6 +10,27 @@ if [ -f /opt/homebrew/bin/brew ]; then
   fpath=($(brew --prefix)/share/zsh/site-functions ${fpath})
 fi
 
+# ---------------------------------------------------------- Nix [PATH]
+# Save current values of local_options and shwordsplit
+local_options_status=$(setopt | grep local_options)
+shwordsplit_status=$(setopt | grep shwordsplit)
+
+# Set the options
+setopt local_options shwordsplit
+
+# Add Nix profiles to fpath if nix command is available
+if command -v nix >/dev/null 2>&1; then
+  for profile in $NIX_PROFILES; do
+    profile_path="$profile/share/zsh/site-functions"
+    [ -d "$profile_path" ] && fpath+=("$profile_path")
+  done
+fi
+
+# Revert to original values
+[[ -z "$local_options_status" ]] && unsetopt local_options
+[[ -z "$shwordsplit_status" ]] && unsetopt shwordsplit
+
+# ---------------------------------------------------------- Config/Load
 # Basic auto/tab complete:
 autoload -Uz compinit
 

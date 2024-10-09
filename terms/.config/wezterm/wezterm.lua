@@ -14,7 +14,7 @@ end
 local function calculate_font_size(uname, osname)
   wezterm.log_info ("UNAME = "..uname..", OSNAME = "..osname)
   if osname == 'macos' then
-    return 16.0
+    return 14.0
   end
   return 12.0
 end

@@ -24,6 +24,8 @@ bindkey '^v' edit-command-line
 
 # search in current PWD
 bindkey -s '^f' 'fzfp\n'
+# edit in current PWD
+bindkey -s '^g' 'vi $(fzfp)\n'
 
 # searh caret
 if zplug check "larkery/zsh-histdb"; then

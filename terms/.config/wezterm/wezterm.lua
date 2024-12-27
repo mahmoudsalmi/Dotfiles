@@ -51,7 +51,7 @@ config.inactive_pane_hsb = {
   brightness = 0.6,
 }
 
-config.color_scheme = 'OneDark (base16)'
+config.color_scheme = 'Catppuccin Mocha'
 
 config.scrollback_lines = 100000
 config.enable_scroll_bar = true

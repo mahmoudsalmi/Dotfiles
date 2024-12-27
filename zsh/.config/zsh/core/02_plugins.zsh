@@ -1,6 +1,8 @@
 # ========================================================================
 # 				ZSH | Plugins
+#  TODO: migrate to znap
 # ========================================================================
+export ZPLUG_SHOW_LOAD_TIMES=true
 source $ZPLUG_HOME/init.zsh
 
 zplug "k4rthik/git-cal", as:command
@@ -43,7 +45,6 @@ zplug "plugins/golang",            from:oh-my-zsh, if:"(( $+commands[go] ))"
 zplug "plugins/svn",               from:oh-my-zsh, if:"(( $+commands[svn] ))"
 zplug "plugins/node",              from:oh-my-zsh, if:"(( $+commands[node] ))"
 zplug "plugins/npm",               from:oh-my-zsh, if:"(( $+commands[npm] ))"
-zplug "lib/nvm",                   from:oh-my-zsh, if:"(( $+commands[nvm] ))"
 zplug "plugins/pip",               from:oh-my-zsh, if:"(( $+commands[pip] ))"
 zplug "plugins/sudo",              from:oh-my-zsh, if:"(( $+commands[sudo] ))"
 zplug "plugins/gpg-agent",         from:oh-my-zsh, if:"(( $+commands[gpg-agent] ))"

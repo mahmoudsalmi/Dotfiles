@@ -21,9 +21,14 @@
 # =============================================================================
 #                               Welcome
 # =============================================================================
-if command -v fastfetch > /dev/null; then
-  fastfetch --stat
+# if command -v fastfetch > /dev/null; then
+#   fastfetch --stat
+# fi
+
+if command -v pfetch > /dev/null; then
+  pfetch --stat
 fi
+
 
 # =============================================================================
 #                              Development

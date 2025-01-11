@@ -7,3 +7,5 @@ zsh/.config/nnn/bookmarks/cookie-sandbox
 **/.DS_Store
 zsh/.config/lvim/lazy-lock.json
 zsh/.config/nnn/.lastd
+
+**/*.zwc

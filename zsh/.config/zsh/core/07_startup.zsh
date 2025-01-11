@@ -1,90 +1,98 @@
-# =============================================================================
-#                               $PATH
-# =============================================================================
+# -------------------------------------------------
+#   ZSH | startup | prompt
+#   - load prompt
+# -------------------------------------------------
+function ms_zsh_startup_prompt {
+  if command -v fastfetch >/dev/null; then
+    fastfetch
+  fi
 
+  # if command -v pfetch >/dev/null; then
+  #   pfetch --stat
+  # fi
 
-# ---------------------------------------------------------- Lua [PATH Lua]
-[ -d $HOME/.luarocks/bin ] && export PATH=$HOME/.luarocks/bin:$PATH
+  znap eval starship "starship init zsh"
+  znap prompt
+}
 
-# ---------------------------------------------------------- Rust [PATH cargo]
-[ -d $HOME/.cargo/bin ] && export PATH=$HOME/.cargo/bin:$PATH
+# -------------------------------------------------
+#   ZSH | startup | load some dev tools
+#   - load luarocks
+#   - load rust
+#   - load fnm
+#   - load angular
+#   - load pnpm
+#   - load sdkman
+# -------------------------------------------------
+function __ms_zsh_startup_dev_tools() {
+  # ---------------------------------------------------------- Lua [PATH Luarocks]
+  [ -d $HOME/.luarocks/bin ] && export PATH=$HOME/.luarocks/bin:$PATH
 
-# ---------------------------------------------------------- Docker [Rancher Desktop]
-[ -d $HOME/.rd/bin ] && export PATH=$HOME/.rd/bin:$PATH
+  # ---------------------------------------------------------- Rust [PATH cargo]
+  [ -d $HOME/.cargo/bin ] && export PATH=$HOME/.cargo/bin:$PATH
+  if command -v rustup >/dev/null; then
+    znap fpath _rustup 'rustup  completions zsh'
+    znap fpath _cargo 'rustup  completions zsh cargo'
+  fi
 
-# ---------------------------------------------------------- Snap [PATH]
-[ -d /snap/bin ] && export PATH=/snap/bin:$PATH
-
-# ---------------------------------------------------------- local bin [PATH]
-[ -d $HOME/.local/bin ] && export PATH=$HOME/.local/bin:$PATH
-
-# =============================================================================
-#                               Welcome
-# =============================================================================
-# if command -v fastfetch > /dev/null; then
-#   fastfetch --stat
-# fi
-
-if command -v pfetch > /dev/null; then
-  pfetch --stat
-fi
-
-
-# =============================================================================
-#                              Development
-# =============================================================================
-
-# ---------------------------------------------------------- Nodejs [FNM]
-if [ -d $HOME/.fnm ]; then
+  # ---------------------------------------------------------- Nodejs [FNM]
+  if [ -d $HOME/.fnm ]; then
     export PATH=$HOME/.fnm:$PATH
-    eval "`fnm env`"
-    source <(fnm completions)
-elif [ -d $HOME/.local/share/fnm ]; then
+  elif [ -d $HOME/.local/share/fnm ]; then
     export PATH="$HOME/.local/share/fnm:$PATH"
-    eval "`fnm env`"
-    source <(fnm completions)
-elif command -v fnm > /dev/null; then
+  fi
+
+  if command -v fnm >/dev/null; then
     eval "$(fnm env --use-on-cd)"
-    source <(fnm completions)
-fi
+    znap fpath _fnm 'fnm completions'
+  fi
 
-# ---------------------------------------------------------- Nodejs [angular]
-if command -v ng > /dev/null; then
-    source <(ng completion script)
-fi
+  # ---------------------------------------------------------- Nodejs [PNPM]
+  export PNPM_HOME=$HOME/.local/share/pnpm
+  mkdir -p $PNPM_HOME
+  export PATH=$PNPM_HOME:$PATH
 
-# ---------------------------------------------------------- Nodejs [PNPM]
-export PNPM_HOME=$HOME/.local/share/pnpm
-mkdir -p $PNPM_HOME
-export PATH=$PNPM_HOME:$PATH
+  if command -v pnpm >/dev/null; then
+    znap fpath _pnpm 'pnpm completion zsh'
+  fi
 
-# ---------------------------------------------------------- Haskell [GHC]
-# [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
+  # ---------------------------------------------------------- Nodejs [angular]
+  if command -v ng >/dev/null; then
+    znap fpath _ng 'ng completion script'
+  fi
 
-# ---------------------------------------------------------- java/sdk [SDKMAN]
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
+  # ---------------------------------------------------------- java/sdk [SDKMAN]
+  export SDKMAN_DIR="$HOME/.sdkman"
+  [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && source "$SDKMAN_DIR/bin/sdkman-init.sh"
+}
 
+# -------------------------------------------------
+#   ZSH | startup | update $PATH
+#   - load dev tools
+#   - load Rancher Desktop
+#   - load snap
+#   - load local bin
+# -------------------------------------------------
+function __ms_zsh_startup_path() {
+  __ms_zsh_startup_dev_tools
 
-# ---------------------------------------------------------- python [Pyenv]
-if [ -d $HOME/.pyenv ]; then
-    export PYENV_ROOT="$HOME/.pyenv"
-    export PATH="$PYENV_ROOT/bin:$PATH"
-    eval "$(pyenv init -)"
-fi
+  # ---------------------------------------------------------- Docker [Rancher Desktop]
+  [ -d $HOME/.rd/bin ] && export PATH=$HOME/.rd/bin:$PATH
 
-# =============================================================================
-#                               StartUp Tools
-# =============================================================================
+  # ---------------------------------------------------------- Snap [PATH]
+  [ -d /snap/bin ] && export PATH=/snap/bin:$PATH
 
-# ---------------------------------------------------------- file manager [nnn]
-[ -f "$HOME/.config/nnn/init_nnn.zsh" ] && source "$HOME/.config/nnn/init_nnn.zsh"
+  # ---------------------------------------------------------- local bin [PATH]
+  [ -d $HOME/.local/bin ] && export PATH=$HOME/.local/bin:$PATH
+}
 
-# ---------------------------------------------------------- Prompt [starship]
-eval "$(starship init zsh)"
+# -------------------------------------------------
+#   ZSH | startup | prompt
+#   - load prompt
+# -------------------------------------------------
+function ms_zsh_startup_load {
+  __ms_zsh_startup_path
 
-
-# =============================================================================
-#                               Custom StartUp
-# =============================================================================
-[ -f "$MS_ZSH_CONFIG/custom/07_startup.zsh" ] && source "$MS_ZSH_CONFIG/custom/07_startup.zsh"
+  #-- custom --#
+  [ -f "$MS_ZSH_CONFIG/custom/07_startup.zsh" ] && source "$MS_ZSH_CONFIG/custom/07_startup.zsh"
+}

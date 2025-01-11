@@ -37,25 +37,6 @@ suckless_install() {
   make "$SL_MODULE_OPTS" && sudo make install
 }
 
-#----------------------------------------------------- nnn
-install_nnn() {
-  reset_env
-  export SL_MODULE_SRC="$MS_SL_REPO/nnn"
-  export SL_MODULE_URL="https://github.com/jarun/nnn"
-  export SL_MODULE_OPTS="O_NERD=1 O_GITSTATUS=1 O_NAMEFIRST=1"
-
-  suckless_install
-}
-
-#----------------------------------------------------- zPlug
-install_zplug() {
-  reset_env
-  export SL_MODULE_SRC="$MS_SL_REPO/zplug"
-  export SL_MODULE_URL="https://github.com/zplug/zplug"
-
-  suckless_get_sources
-}
-
 #----------------------------------------------------- mahmoudsalmi/neovim
 install_neovim() {
   reset_env
@@ -68,11 +49,8 @@ install_neovim() {
 
 #----------------------------------------------------- COMMANDS
 install_all() {
-  install_zplug
-  install_nnn
   install_neovim
 }
 
 #----------------------------------------------------- RUN
 install_all
-

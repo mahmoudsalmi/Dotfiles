@@ -79,6 +79,8 @@ brew "btop"                             # pretty top
 brew "gotop"
 brew "htop"
 # brew "exa"                              # pretty ls
+brew "atuin"                            # history manager
+brew "zoxide"                           # fancy cd
 brew "eza"                              # pretty ls
 brew "fd"                               # power find
 brew "ffmpeg"                           # multimedia framework
@@ -94,6 +96,7 @@ brew "pfetch"
 brew "pandoc"                           # Document converter
 brew "procs"                            # pretty ps
 brew "ranger"                           # File manager
+brew "yazi"                             # file manager
 brew "ripgrep"                          # pretty grep [rg]
 brew "teamookla/speedtest/speedtest"    # speedtest
 brew "starship"                         # prompt
